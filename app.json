@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "rn_image_share",
+    "slug": "snack-c17396f1-d42e-4a52-9d2c-09ef4b65b0c6",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+"bundleIdentifier": "com.PranavSavla.RNImageShare"
+},
+"android": {
+"package": "com.Team6.RNImageShare",
+"versionCode": 1
+}
+    }
+  }
