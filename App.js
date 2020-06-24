@@ -38,11 +38,10 @@ export default function App() {
         <TouchableOpacity onPress={openShareDialogAsync} style={styles.button}>
           <Text style={styles.buttonText}>Share this photo</Text>
         </TouchableOpacity>
-<{cam}>
       </View>
     );
   }
-Cam()
+Cam();
   return (
     <View style={styles.container}>
       <Image source={{ uri: 'https://i.imgur.com/TkIrScD.png' }} style={styles.logo} />
