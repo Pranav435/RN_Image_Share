@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
-
+import Cam from ./cam.js"
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
 
@@ -38,10 +38,11 @@ export default function App() {
         <TouchableOpacity onPress={openShareDialogAsync} style={styles.button}>
           <Text style={styles.buttonText}>Share this photo</Text>
         </TouchableOpacity>
+<{cam}>
       </View>
     );
   }
-
+Cam()
   return (
     <View style={styles.container}>
       <Image source={{ uri: 'https://i.imgur.com/TkIrScD.png' }} style={styles.logo} />
