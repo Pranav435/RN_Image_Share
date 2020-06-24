@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
-import Cam from './cam.js';
+import Cam from './camera.js';
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
 
