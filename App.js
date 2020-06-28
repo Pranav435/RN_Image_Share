@@ -3,6 +3,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
 import Cam from './camera.js';
+Cam();
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
 
@@ -41,7 +42,7 @@ export default function App() {
       </View>
     );
   }
-Cam();
+
   return (
     <View style={styles.container}>
       <Image source={{ uri: 'https://i.imgur.com/TkIrScD.png' }} style={styles.logo} />
