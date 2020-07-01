@@ -1,12 +1,12 @@
-import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native';
+  import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
 import Cam from './camera.js';
 
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
-
+let cameraWindow=() => Cam();
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
 
@@ -29,7 +29,7 @@ export default function App() {
       return;
     }
 
-    await Sharing.shareAsync(selectedImage.localUri);
+    Sharing.shareAsync(selectedImage.localUri);
   };
 
   if (selectedImage !== null) {
@@ -53,8 +53,12 @@ export default function App() {
       <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
-<Text style={style.instructions}> Or, click the button below to open a camera window to take a memory! </Text>
-<Button title="Open Camera Window" accessibilityLabel="Double Tap to open a camera window" onPress="Cam()" />
+<Text style={styles.instructions}> Alternately, click the button below this text to open up a camera window </Text>
+<touchableOpacity style={styles.button onPress={cameraWindow}>
+<text style={styles.buttonText}> Open Camera Window </Text>
+</touchableOpacity>
+
+
     </View>
   );
 }
