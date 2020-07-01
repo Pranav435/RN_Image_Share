@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
 import Cam from './camera.js';
@@ -36,7 +36,6 @@ export default function App() {
     return (
       <View style={styles.container}>
         <Image source={{ uri: selectedImage.localUri }} style={styles.thumbnail} />
-Cam();
         <TouchableOpacity onPress={openShareDialogAsync} style={styles.button}>
           <Text style={styles.buttonText}>Share this photo</Text>
         </TouchableOpacity>
@@ -54,6 +53,8 @@ Cam();
       <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
+<Text style={style.instructions}> Or, click the button below to open a camera window to take a memory! </Text>
+<Button title="Open Camera Window" accessibilityLabel="Double Tap to open a camera window" onPress="Cam()" />
     </View>
   );
 }
