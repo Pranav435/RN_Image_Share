@@ -54,9 +54,9 @@ export default function App() {
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
 <Text style={styles.instructions}> Alternately, click the button below this text to open up a camera window </Text>
-<touchableOpacity style={styles.button} onPress={() => <Cam />}>
+<TouchableOpacity style={styles.button} onPress={() => <Cam />}>
 <Text style={styles.buttonText}> Open Camera Window </Text>
-</touchableOpacity>
+</TouchableOpacity>
 
 
     </View>
