@@ -6,7 +6,6 @@ import Cam from './camera.js';
 
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
-const cameraWindow=Cam();
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
 
@@ -39,6 +38,7 @@ const cameraWindow=Cam();
         <TouchableOpacity onPress={openShareDialogAsync} style={styles.button}>
           <Text style={styles.buttonText}>Share this photo</Text>
         </TouchableOpacity>
+
       </View>
     );
   }
@@ -54,7 +54,7 @@ const cameraWindow=Cam();
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
 <Text style={styles.instructions}> Alternately, click the button below this text to open up a camera window </Text>
-<touchableOpacity style={styles.button} onPress={cameraWindow}>
+<touchableOpacity style={styles.button} onPress={() => <Cam />}>
 <Text style={styles.buttonText}> Open Camera Window </Text>
 </touchableOpacity>
 
